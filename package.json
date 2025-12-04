@@ -1,0 +1,23 @@
+{
+  "name": "lavidaloca3.0",
+  "version": "1.0.0",
+  "description": "La Vida Loca Page Modernized",
+  "license": "ISC",
+  "author": "Kacper Marszelewski",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./public/css/style.css -o ./public/css/output.css",
+    "build:js": "npx esbuild public/js/main.js --bundle --outfile=public/js/bundle.js --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./public/css/style.css -o ./public/css/output.css --watch",
+    "build": "npm run build:css && npm run build:js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "swiper": "^12.0.3",
+    "tailwindcss": "^4.1.17"
+  }
+}

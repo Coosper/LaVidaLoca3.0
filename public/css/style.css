@@ -1,0 +1,118 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("/fonts/unfair/Unfair Style3Shadow.ttf") format("truetype"),
+    url("/fonts/unfair/Unfair Style3Shadow.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BrandonFont';
+  src: url('/fonts/brandon/BrandonPrinted-One.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@import "tailwindcss";
+
+@theme {
+  --font-family-custom: CustomFont, sans-serif;
+  --font-family-brandon: BrandonFont, sans-serif;
+
+  --color-custom-yellow: #e8c006;
+  --color-custom-red: #c91f62;
+  --color-custom-green: #76b729;
+  --color-custom-purple: #7c4b7c;
+  --color-menu-background: #f7eedf;
+  --color-step1-border: #e50067;
+  --color-step1-background: #f7d5d3;
+  --color-step2-border: #954091;
+  --color-step2-background: #EDDCD5;
+  --color-step3-border: #12999E;
+  --color-step3-background: #E6E8DB;
+  --color-other-border: #77B72B;
+  --color-other-background: #E9E8CC;
+  --color-addon-border: #ea6506;
+  --color-addon-background: #f6e0c8;
+}
+
+/* Mobile menu animations */
+/* Mobile menu initial state: hidden and collapsed */
+#mobile-menu {
+  max-height: 0;
+  /* Hide the menu by default */
+  overflow: hidden;
+  /* Prevent content from overflowing */
+  transition: max-height 0.4s ease-in-out;
+  /* Smooth transition for opening/closing */
+}
+
+#mobile-menu.open {
+  max-height: 500px;
+  /* Adjust based on your menu height */
+}
+
+/* SWIPER CUSTOMIZATION */
+
+/* Hero Swiper (main slideshow) */
+.mySwiper {
+  width: 100%;
+  height: 600px;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Menu Navigation Swiper (horizontal menu) */
+.menuNavSwiper {
+  width: 100%;
+  height: auto;
+  overflow: visible !important;
+}
+
+.menuNavSwiper .swiper-wrapper {
+  align-items: center;
+  overflow: visible !important;
+}
+
+.menuNavSwiper .swiper-slide {
+  width: auto;
+}
+
+/* Navigation buttons with shadow */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #c91f62 !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Pagination dots with color */
+.swiper-pagination-bullet {
+  background: #e8c006 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e8c006 !important;
+  opacity: 1;
+}

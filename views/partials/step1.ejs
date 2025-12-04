@@ -1,0 +1,49 @@
+<section id="step1"
+    class="relative bg-step1-background border-dotted border-step1-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-step1-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        🥩 Step 1: Choose Your Meat
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <% menu.step1_meats.forEach(function(meat) { %>
+            <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform"
+                data-category="all">
+                <!-- Image Section -->
+                <div
+                    class="relative h-60 bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center overflow-hidden">
+                    <img src="<%= meat.image %>" alt="<%= meat.name %>" class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="hidden absolute inset-0 items-center justify-center">
+                        <span class="text-6xl">🌮</span>
+                    </div>
+                </div>
+                <!-- Content Section -->
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-step1-border mb-2">
+                        <%= meat.name %>
+                    </h3>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                        <%= meat.description %>
+                    </p>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <% if (meat.dietary && meat.dietary.gluten_free) { %>
+                            <span
+                                class="text-xxs bg-other-background text-other-border px-2 py-1 rounded-full font-semibold flex items-center gap-1">
+                                <img src="/images/GF.ico" class="inline-block h-4 w-4" alt="Gluten Free">
+                            </span>
+                            <% } %>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">
+                                    <%= meat.spice_level %>
+                                </span>
+                                <% if (meat.allergens && meat.allergens.length> 0) { %>
+                                    <span class="text-xs bg-step1-background text-step1-border px-2 py-1 rounded-full">
+                                        (<%= meat.allergens.join(', ') %>)
+                            </span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</section>

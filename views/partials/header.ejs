@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>La Vida Loca</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/output.css" rel="stylesheet">
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- 
+      ============================================================
+      ========================= NAVBAR ===========================
+      ============================================================
+    -->
+    <nav class="bg-black shadow-lg border-b-4 border-custom-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <!-- Logo Section -->
+                <div class="shrink-0">
+                    <a href="/" class="flex items-center space-x-3 group">
+                        <img src="/images/lavidaloca_logo.png" alt="La Vida Loca Logo"
+                            class="h-12 w-auto transition-transform duration-300 group-hover:scale-110" />
+                        <p class="text-gray-50 text-3xl font-family-custom tracking-wide">
+                            La Vida Loca
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="/"
+                        class="text-gray-50 font-family-brandon hover:text-custom-yellow px-3 py-2 rounded-md transition-all duration-300 hover:bg-gray-900 transform hover:translate-y--2">
+                        Home
+                    </a>
+                    <a href="/menu"
+                        class="text-gray-50 font-family-brandon hover:text-custom-red px-3 py-2 rounded-md transition-all duration-300 hover:bg-gray-900 transform hover:translate-y--2">
+                        Menu
+                    </a>
+                    <a href="/pages/menu.html"
+                        class="text-gray-50 font-family-brandon hover:text-step3-border px-3 py-2 rounded-md transition-all duration-300 hover:bg-gray-900 transform hover:translate-y--2">
+                        Order Online
+                    </a>
+                    <a href="/pages/about.html"
+                        class="text-gray-50 font-family-brandon hover:text-custom-green px-3 py-2 rounded-md transition-all duration-300 hover:bg-gray-900 transform hover:translate-y--2">
+                        About
+                    </a>
+                    <a href="/pages/contact.html"
+                        class="text-gray-50 font-family-brandon hover:text-custom-purple px-3 py-2 rounded-md transition-all duration-300 hover:bg-gray-900 transform hover:translate-y--2">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn"
+                        class="text-gray-50 hover:text-custom-yellow focus:outline-none focus:ring-2 focus:ring-custom-yellow focus:ring-offset-2 focus:ring-offset-black rounded-md p-2 transition-colors duration-300"
+                        aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" type="button">
+                        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden">
+            <div class="px-4 pt-2 pb-4 space-y-2 bg-black border-t border-gray-800">
+                <a href="/"
+                    class="block text-gray-50 font-family-brandon hover:text-custom-yellow hover:bg-gray-900 px-4 py-3 rounded-md transition-all duration-300 transform hover:translate-x-2">
+                    Home
+                </a>
+                <a href="/menu"
+                    class="block text-gray-50 font-family-brandon hover:text-custom-red hover:bg-gray-900 px-4 py-3 rounded-md transition-all duration-300 transform hover:translate-x-2">
+                    Menu
+                </a>
+                <a href="/pages/menu.html"
+                    class="block text-gray-50 font-family-brandon hover:text-step3-border hover:bg-gray-900 px-4 py-3 rounded-md transition-all duration-300 transform hover:translate-x-2">
+                    Order Online
+                </a>
+                <a href="/pages/about.html"
+                    class="block text-gray-50 font-family-brandon hover:text-custom-green hover:bg-gray-900 px-4 py-3 rounded-md transition-all duration-300 transform hover:translate-x-2">
+                    About
+                </a>
+                <a href="/pages/contact.html"
+                    class="block text-gray-50 font-family-brandon hover:text-custom-purple hover:bg-gray-900 px-4 py-3 rounded-md transition-all duration-300 transform hover:translate-x-2">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>

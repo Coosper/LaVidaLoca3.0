@@ -1,0 +1,88 @@
+<%- include('../partials/header') %>
+
+    <!-- Hero Banner with Images -->
+    <section
+        class="relative bg-gradient-to-r from-custom-red to-custom-yellow py-12 overflow-hidden border-b-4 border-custom-red">
+        <div class="absolute inset-0 opacity-20">
+            <div
+                class="absolute top-0 left-0 w-96 h-96 bg-custom-yellow rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-custom-red rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl text-white font-family-custom mb-4 -rotate-2">
+                Our Menu!
+            </h1>
+            <p class="text-white font-family-brandon text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+                All our dishes and sauces are homemade with love and authentic Mexican recipes!
+            </p>
+
+            <!-- Quick Order CTA -->
+            <a href="https://lavidaloca.flipdish.menu/order"
+                class="inline-block bg-white text-custom-red px-8 py-4 rounded-full font-bold font-family-brandon hover:bg-custom-yellow hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105">
+                🛒 Order Online Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Jump Navigation (Sticky on scroll with Swiper) -->
+    <div class="sticky top-0 z-40 bg-menu-background shadow-md border-b-4 border-custom-red">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="swiper menuNavSwiper py-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide !w-auto">
+                        <a href="#step1"
+                            class="block px-4 py-2 bg-step1-border text-white rounded-full font-family-brandon text-sm font-bold hover:bg-red-700 transition">
+                            Step 1: Meat
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
+                        <a href="#step2"
+                            class="block px-4 py-2 bg-step2-border text-white rounded-full font-family-brandon text-sm font-bold hover:bg-yellow-700 transition">
+                            Step 2: Dish
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
+                        <a href="#step3"
+                            class="block px-4 py-2 bg-step3-border text-white rounded-full font-family-brandon text-sm font-bold hover:bg-green-700 transition">
+                            Step 3: Customize
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
+                        <a href="#other"
+                            class="block px-4 py-2 bg-other-border text-white rounded-full font-family-brandon text-sm font-bold hover:bg-purple-700 transition">
+                            Other Dishes
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
+                        <a href="#sides"
+                            class="block px-4 py-2 bg-gray-700 text-white rounded-full font-family-brandon text-sm font-bold hover:bg-gray-800 transition">
+                            Sides
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
+                        <a href="#drinks"
+                            class="block px-4 py-2 bg-orange-600 text-white rounded-full font-family-brandon text-sm font-bold hover:bg-orange-700 transition">
+                            Drinks
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call the step 1 menu partial. -->
+    <%- include('../partials/step1', { menu: menu }) %>
+
+    <!-- Call the step 2 menu partial. -->
+    <%- include('../partials/step2', { menu: menu }) %>
+
+    <!-- Call the step 3 menu partial. -->
+    <%- include('../partials/step3', { menu: menu }) %>
+
+
+</section>
+    <%- include('../partials/footer') %>

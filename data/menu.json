@@ -1,0 +1,570 @@
+{
+    "restaurant": {
+        "name": "La Vida Loca",
+        "location": "The Halfway House, Tramore Road, X91-NNP0, Waterford",
+        "phone": "+353 83 305 2216",
+        "opening_hours": {
+            "monday": "Closed",
+            "tuesday": "Closed",
+            "wednesday": "12pm - 7pm",
+            "thursday": "12pm - 7pm",
+            "friday": "12pm - 8pm",
+            "saturday": "1pm - 8pm",
+            "sunday": "1pm - 7pm"
+        }
+    },
+    "step1_meats": [
+        {
+            "id": 1,
+            "name": "Al Pastor",
+            "description": "Succulent spit-grilled pork shoulder marinated in a traditional lightly spiced adobo. This beloved recipe originates from Puebla and Mexico City, delivering authentic street food flavor.",
+            "image": "/images/alpastor.png",
+            "spice_level": "Not Spicy",
+            "allergens": [],
+            "dietary": {
+                "gluten_free": false,
+                "spicy": false
+            }
+        },
+        {
+            "id": 2,
+            "name": "Birria",
+            "description": "Slow-cooked beef stew infused with smoky adobo made from charred tomatillos, pasilla chiles, herbs, and spices. Braised in rich consommé for melt-in-your-mouth tenderness.",
+            "image": "/images/birria1.png",
+            "spice_level": "Lightly Spicy",
+            "allergens": [
+                9
+            ],
+            "dietary": {
+                "gluten_free": false,
+                "spicy": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "Grilled Chicken Thighs",
+            "description": "Juicy chicken thighs marinated in zesty lemon, cracked pepper, and fresh herbs. Grilled to perfection with a crispy exterior and tender inside.",
+            "image": "/images/chicken.png",
+            "spice_level": "Not Spicy",
+            "allergens": [],
+            "dietary": {
+                "gluten_free": false,
+                "spicy": false
+            }
+        }
+    ],
+    "step2_dishes": {
+        "traditional_mexican": [
+            {
+                "id": 1,
+                "name": "Soft Tacos",
+                "description": "Traditional 8-inch soft corn tortillas filled with your choice of meat.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": false
+                },
+                "sides_included": "Salsa Roja, Salsa Verde, and a fresh side salad"
+            },
+            {
+                "id": 2,
+                "name": "Birria Tostada",
+                "description": "Two crispy corn tortillas loaded with beef, cheese, onion, and coriander. Comes with birria consommé for dipping.",
+                "price": "13.50",
+                "spice_level": "Lightly Spicy",
+                "allergens": [
+                    7,
+                    9
+                ],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": true
+                },
+                "sides_included": "Salsa Roja, Salsa Verde, and a fresh side salad"
+            },
+            {
+                "id": 3,
+                "name": "Quesadilla",
+                "description": "Four medium corn tortillas filled with melted cheese and your choice of meat. Grilled on birria drippings for extra crunch.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [
+                    7
+                ],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": false
+                },
+                "sides_included": "Salsa Roja, Salsa Verde, and a fresh side salad"
+            }
+        ],
+        "loaded_tex_mex": [
+            {
+                "id": 4,
+                "name": "Burrito",
+                "description": "Grilled flour tortilla stuffed with Mexican rice, refried beans, cheese sauce, fresh veggies, and your choice of salsa.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [
+                    "1A",
+                    7,
+                    9
+                ],
+                "dietary": {
+                    "gluten_free": false,
+                    "spicy": false
+                }
+            },
+            {
+                "id": 5,
+                "name": "Burrito Bowl",
+                "description": "Nachos, rice, beans, cheese, veggies, Loco sauce, and your choice of salsa in a bowl.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [
+                    7,
+                    9
+                ],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": false
+                }
+            },
+            {
+                "id": 6,
+                "name": "Loaded Nachos",
+                "description": "Corn tortilla chips smothered in cheese sauce, topped with fresh veggies and your choice of salsa.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [
+                    3,
+                    7
+                ],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": false
+                }
+            },
+            {
+                "id": 7,
+                "name": "Mexican Style Loaded Fries",
+                "description": "Crispy fries topped with cheese sauce, fresh veggies, and your choice of salsa.",
+                "price": "13.50",
+                "spice_level": null,
+                "allergens": [
+                    3,
+                    7
+                ],
+                "dietary": {
+                    "gluten_free": true,
+                    "spicy": false
+                }
+            }
+        ]
+    },
+    "step3_customization": {
+        "salsas": [
+            {
+                "id": 1,
+                "name": "Salsa Roja",
+                "description": "Refreshing lightly spiced tomato-based salsa.",
+                "spice_level": "Mild",
+                "price": "2.00"
+            },
+            {
+                "id": 2,
+                "name": "Salsa Verde",
+                "description": "Moderately spicy sauce based on green tomatillos.",
+                "spice_level": "Medium",
+                "price": "2.00"
+            },
+            {
+                "id": 3,
+                "name": "Pineapple Preacher",
+                "description": "Sweet pineapple heat with Carolina reaper peppers.",
+                "spice_level": "Hot",
+                "price": "3.00"
+            },
+            {
+                "id": 4,
+                "name": "Strawberry Reaper",
+                "description": "Strawberry and smoked chipotle with Carolina reaper.",
+                "spice_level": "Hot",
+                "price": "3.00"
+            }
+        ],
+        "add_ons": [
+            {
+                "id": 1,
+                "name": "Cheese sauce",
+                "price": "0.80",
+                "allergens": [
+                    7
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Jalapeños",
+                "price": "0.80",
+                "allergens": [
+                    7
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Loco Chipotle sauce",
+                "price": "0.80",
+                "allergens": [
+                    8
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Guacamole",
+                "price": "0.80",
+                "allergens": []
+            },
+            {
+                "id": 5,
+                "name": "Sour cream",
+                "price": "0.80",
+                "allergens": [
+                    7
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Monterey Jack cheese",
+                "price": "0.80",
+                "allergens": [
+                    7
+                ]
+            },
+            {
+                "id": 7,
+                "name": "Pickled onion",
+                "price": "0.80",
+                "allergens": []
+            },
+            {
+                "id": 8,
+                "name": "Grilled sweet potatoes",
+                "price": "0.80",
+                "allergens": []
+            },
+            {
+                "id": 9,
+                "name": "Refried beans",
+                "price": "0.80",
+                "allergens": [
+                    9
+                ]
+            }
+        ]
+    },
+    "other_dishes": [
+        {
+            "id": 1,
+            "name": "Torta Huevos Rancheros",
+            "description": "Mexican-style sandwich filled with meat, pinto beans, salsa verde, cheesy nacho egg, sour cream, and lettuce.",
+            "price": "14.00",
+            "allergens": [
+                "1A",
+                3,
+                6,
+                7,
+                8,
+                11
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Traditional Caesar Salad",
+            "description": "Originated in Tijuana! Homemade dressing, cos lettuce, crushed nachos, parmesan, crispy bacon, with vegetarian or meat options.",
+            "price": "13.00",
+            "allergens": [
+                3,
+                4,
+                7,
+                10,
+                12
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Mexican Tapas Box for 2",
+            "description": "A selection of our favorite Mexican dishes served as a tapas platter for two. Includes two drinks and two sides or desserts.",
+            "price": "50.00",
+            "allergens": []
+        }
+    ],
+    "sides": [
+        {
+            "id": 1,
+            "name": "Elotes",
+            "description": "Mexican-style sweet corn with mayo, queso, and coriander.",
+            "price": "4.50",
+            "allergens": [
+                3,
+                7
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Loco Chips",
+            "description": "Chips with our signature Loco Chipotle sauce.",
+            "price": "6.00",
+            "allergens": []
+        },
+        {
+            "id": 3,
+            "name": "Cheesy Fries or Nachos",
+            "description": "Topped with homemade cheese sauce.",
+            "price": "6.00",
+            "allergens": [
+                7
+            ],
+            "dietary": {
+                "gluten_free": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Dressed Fries/Nachos",
+            "description": "With cheese sauce, guacamole, and salsa.",
+            "price": "6.00",
+            "allergens": [
+                7
+            ],
+            "dietary": {
+                "gluten_free": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Plain Fries",
+            "description": null,
+            "price": "4.00",
+            "allergens": []
+        },
+        {
+            "id": 6,
+            "name": "Loco Chipotle Mayo",
+            "description": null,
+            "price": "3.00",
+            "allergens": [
+                8
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Mexican Rice",
+            "description": null,
+            "price": "4.00",
+            "allergens": [
+                9
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Refried Beans",
+            "description": null,
+            "price": "3.00",
+            "allergens": [
+                9
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Extra Meat",
+            "description": null,
+            "price": "5.00",
+            "allergens": []
+        },
+        {
+            "id": 10,
+            "name": "Birria Consommé",
+            "description": null,
+            "price": "4.00",
+            "allergens": []
+        },
+        {
+            "id": 11,
+            "name": "Cheese or Jalapeño Cheese Sauce",
+            "description": null,
+            "price": "4.00",
+            "allergens": []
+        },
+        {
+            "id": 12,
+            "name": "Side Salad",
+            "description": null,
+            "price": "5.00",
+            "allergens": []
+        },
+        {
+            "id": 13,
+            "name": "Guacamole",
+            "description": null,
+            "price": "3.00",
+            "allergens": []
+        },
+        {
+            "id": 14,
+            "name": "Pico de Gallo",
+            "description": null,
+            "price": "3.00",
+            "allergens": []
+        },
+        {
+            "id": 15,
+            "name": "Strawberry Reaper",
+            "description": null,
+            "price": "3.00",
+            "allergens": [],
+            "dietary": {
+                "spicy": true
+            }
+        },
+        {
+            "id": 16,
+            "name": "Pineapple Preacher",
+            "description": null,
+            "price": "3.00",
+            "allergens": [],
+            "dietary": {
+                "spicy": true
+            }
+        },
+        {
+            "id": 17,
+            "name": "Salsa Roja (Mild)",
+            "description": null,
+            "price": "2.00",
+            "allergens": []
+        },
+        {
+            "id": 18,
+            "name": "Salsa Verde (Medium)",
+            "description": null,
+            "price": "2.00",
+            "allergens": []
+        }
+    ],
+    "kids_menu": [
+        {
+            "id": 1,
+            "name": "Kids Loaded Fries/Nachos or Rice",
+            "description": "Cheese sauce, meat, tomato, peppers, and light salsa.",
+            "price": "8.00",
+            "allergens": []
+        },
+        {
+            "id": 2,
+            "name": "Mini Torta",
+            "description": "Meat-loaded bun with cheese, salad, and ketchup or mayo.",
+            "price": "8.00",
+            "allergens": [
+                "1A",
+                3,
+                6,
+                7,
+                8,
+                11
+            ]
+        }
+    ],
+    "drinks": {
+        "mexican_drinks": [
+            {
+                "id": 1,
+                "name": "Horchata",
+                "description": "Traditional Mexican rice milk beverage with cinnamon and vanilla. Lightly sweetened milkshake-style drink.",
+                "price": "5.00",
+                "allergens": [
+                    7
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Jarritos",
+                "description": "Naturally flavored Mexican lemonades.",
+                "price": "4.20",
+                "allergens": []
+            }
+        ],
+        "other_drinks": [
+            {
+                "id": 1,
+                "name": "Regular Coke",
+                "price": "3.50"
+            },
+            {
+                "id": 2,
+                "name": "Coke Zero",
+                "price": "3.00"
+            },
+            {
+                "id": 3,
+                "name": "Monster Mango",
+                "price": "4.00"
+            },
+            {
+                "id": 4,
+                "name": "Water",
+                "price": "3.00"
+            }
+        ]
+    },
+    "desserts": [
+        {
+            "id": 1,
+            "name": "Tres Leches",
+            "description": "Authentic Mexican dessert.",
+            "price": "4.50",
+            "allergens": [
+                "1A",
+                3,
+                7
+            ]
+        }
+    ],
+    "allergen_information": {
+        "main_allergens": {
+            "1": "Cereals containing gluten",
+            "2": "Crustaceans",
+            "3": "Eggs",
+            "4": "Fish",
+            "5": "Peanuts",
+            "6": "Soybeans",
+            "7": "Milk",
+            "8": "Nuts",
+            "9": "Celery",
+            "10": "Mustard",
+            "11": "Sesame seeds",
+            "12": "Sulphur dioxide and sulphites",
+            "13": "Lupin",
+            "14": "Molluscs"
+        },
+        "gluten_subcategories": {
+            "A": "Wheat",
+            "B": "Wheatberries",
+            "C": "Durum",
+            "D": "Emmer",
+            "E": "Semolina",
+            "F": "Spelt",
+            "G": "Farina",
+            "H": "Farro",
+            "I": "Graham",
+            "J": "Kamut",
+            "K": "Khorasan wheat",
+            "L": "Rye",
+            "M": "Triticale",
+            "N": "Malt",
+            "O": "Brewer's yeast",
+            "P": "Wheat starch"
+        }
+    }
+}

@@ -1,0 +1,100 @@
+<section id="step3"
+    class="relative bg-step3-background border-dotted border-step3-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-step3-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        🌶️ Step 3: Customize
+    </div>
+
+    <div class="mt-10 flex flex-col lg:flex-row gap-8">
+
+        <!-- Salsas Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step3-border mb-3">Pick Your Salsa</h3>
+            <p class="text-gray-700 text-sm mb-6 italic">Choose how spicy you'd like your dish!! (Included FREE)</p>
+
+            <ul class="space-y-5">
+                <% menu.step3_customization.salsas.forEach(function(salsa) { %>
+                    <li class="flex items-start">
+                        <span class="text-step3-border mr-3 text-2xl">
+                            <% if (salsa.name.includes('Roja')) { %>🍅
+                                <% } else if (salsa.name.includes('Verde')) { %>💚
+                                    <% } else if (salsa.name.includes('Pineapple')) { %>🍍
+                                        <% } else if (salsa.name.includes('Strawberry')) { %>🍓
+                                            <% } %>
+                        </span>
+                        <div class="flex-1">
+                            <p class="text-step3-border font-bold text-lg">
+                                <%= salsa.name %>
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <%= salsa.description %>
+                            </p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <% if (salsa.spice_level==='Mild' ) { %>
+                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">🌶️
+                                        Mild</span>
+                                    <% } else if (salsa.spice_level==='Medium' ) { %>
+                                        <span
+                                            class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">🌶️🌶️
+                                            Medium</span>
+                                        <% } else if (salsa.spice_level==='Hot' ) { %>
+                                            <span
+                                                class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">🌶️🌶️🌶️
+                                                Hot!</span>
+                                            <% } %>
+                            </div>
+                        </div>
+                    </li>
+                    <% }); %>
+            </ul>
+        </div>
+
+        <!-- Divider (horizontal on mobile) -->
+        <div class="lg:hidden my-8 flex items-center">
+            <div class="flex-1 border-t-2 border-step3-border border-dotted"></div>
+            <span class="px-4 text-step3-border font-bold text-xl">✦</span>
+            <div class="flex-1 border-t-2 border-step3-border border-dotted"></div>
+        </div>
+
+        <!-- Divider (vertical on large screens) -->
+        <div class="hidden lg:flex lg:flex-col lg:items-center lg:justify-center lg:mx-4">
+            <div class="flex-1 border-l-2 border-step3-border border-dotted"></div>
+            <span class="py-4 text-step3-border font-bold text-2xl">✦</span>
+            <div class="flex-1 border-l-2 border-step3-border border-dotted"></div>
+        </div>
+
+        <!-- Add-Ons Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step3-border mb-3">➕ Optional Add-Ons</h3>
+            <p class="text-gray-700 text-sm mb-6 italic">Enhance your Tex-Mex dish with extra toppings for €0.80 each.
+            </p>
+
+            <ul class="space-y-3">
+                <% menu.step3_customization.add_ons.forEach(function(addon) { %>
+                    <li class="flex items-center gap-2">
+                        <span class="text-step3-border text-xl">
+                            <% if (addon.name.includes('Cheese')) { %>🧀
+                                <% } else if (addon.name.includes('Jalapeño')) { %>🌶️
+                                    <% } else if (addon.name.includes('Chipotle')) { %>🔥
+                                        <% } else if (addon.name.includes('Guacamole')) { %>🥑
+                                            <% } else if (addon.name.includes('Sour cream')) { %>🥛
+                                                <% } else if (addon.name.includes('Monterey')) { %>🧀
+                                                    <% } else if (addon.name.includes('onion')) { %>🧅
+                                                        <% } else if (addon.name.includes('sweet potato')) { %>🍠
+                                                            <% } else if (addon.name.includes('beans')) { %>🫘
+                                                                <% } %>
+                        </span>
+                        <span class="text-gray-700 text-sm font-medium">
+                            <%= addon.name %>
+                                <% if (addon.allergens && addon.allergens.length> 0) { %>
+                                    <span class="text-xs text-step3-border">(<%= addon.allergens.join(', ') %>)</span>
+                            <% } %>
+                        </span>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        
+    </div>
+    
+</section>
