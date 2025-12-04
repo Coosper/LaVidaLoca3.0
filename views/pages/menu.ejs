@@ -1,4 +1,4 @@
-<%- include('../partials/header') %>
+<%- include('../partials/global/header') %>
 
     <!-- Hero Banner with Images -->
     <section
@@ -64,9 +64,15 @@
                         </a>
                     </div>
                     <div class="swiper-slide !w-auto">
+                        <a href="#kids"
+                            class="block px-4 py-2 bg-orange-600 text-white rounded-full font-family-brandon text-sm font-bold hover:bg-orange-700 transition">
+                            Kids' Menu
+                        </a>
+                    </div>
+                    <div class="swiper-slide !w-auto">
                         <a href="#drinks"
                             class="block px-4 py-2 bg-orange-600 text-white rounded-full font-family-brandon text-sm font-bold hover:bg-orange-700 transition">
-                            Drinks
+                            Drinks & Desserts
                         </a>
                     </div>
                 </div>
@@ -75,14 +81,28 @@
     </div>
 
     <!-- Call the step 1 menu partial. -->
-    <%- include('../partials/step1', { menu: menu }) %>
+    <%- include('../partials/menu/step1', { menu: menu }) %>
 
     <!-- Call the step 2 menu partial. -->
-    <%- include('../partials/step2', { menu: menu }) %>
+    <%- include('../partials/menu/step2', { menu: menu }) %>
 
     <!-- Call the step 3 menu partial. -->
-    <%- include('../partials/step3', { menu: menu }) %>
+    <%- include('../partials/menu/step3', { menu: menu }) %>
+
+    <!-- Call the other dishes menu partial. -->
+    <%- include('../partials/menu/others', { menu: menu }) %>
+
+    <!-- Call the sides menu partial. -->
+    <%- include('../partials/menu/sides', { menu: menu }) %>
+
+    <!-- Call the kids' menu partial. -->
+    <%- include('../partials/menu/kids', { menu: menu }) %>
+
+    <!-- Call the drinks menu partial. -->
+    <%- include('../partials/menu/drinks', { menu: menu }) %>
 
 
 </section>
-    <%- include('../partials/footer') %>
+
+    <%- include('../partials/menu/allergy.ejs') %>
+    <%- include('../partials/global/footer') %>

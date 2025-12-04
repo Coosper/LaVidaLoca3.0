@@ -1,0 +1,41 @@
+<section id="kids"
+    class="relative bg-step2-background border-dotted border-step2-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-step2-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        👶 Kids' Menu
+    </div>
+
+    <div class="mt-10">
+        <ul class="space-y-5">
+            <% menu.kids_menu.forEach(function(item) { %>
+                <li class="flex items-start">
+                    <span class="text-step2-border mr-2 text-2xl">
+                        <% if (item.name.includes('Fries') || item.name.includes('Nachos')) { %>🍟
+                            <% } else if (item.name.includes('Torta')) { %>🥖
+                                <% } else { %>🍽️<% } %>
+                    </span>
+                    <div class="flex justify-between w-full">
+                        <div class="flex-1">
+                            <p class="text-step2-border font-bold text-lg">
+                                <%= item.name %>
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <%= item.description %>
+                            </p>
+                            <div class="flex gap-2 mt-1 flex-wrap">
+                                <% if (item.allergens && item.allergens.length> 0) { %>
+                                    <span
+                                        class="text-[10px] bg-step2-background text-step2-border border border-step2-border px-1.5 py-0.5 rounded-full">
+                                        (<%= item.allergens.join(', ') %>)
+                                    </span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <p class="text-step2-border font-bold text-xl ml-4">€<%= item.price %></p>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+</section>

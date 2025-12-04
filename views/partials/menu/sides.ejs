@@ -1,0 +1,121 @@
+<section id="sides"
+    class="relative bg-step3-background border-dotted border-step3-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-step3-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        🍟 Sides
+    </div>
+
+    <div class="mt-10 flex flex-col lg:flex-row gap-8">
+
+        <!-- Featured Sides Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step3-border mb-6">Featured Sides</h3>
+
+            <ul class="space-y-5">
+                <% menu.sides.slice(0, 4).forEach(function(side) { %>
+                    <li class="flex items-start">
+                        <span class="text-step3-border mr-3 text-2xl">
+                            <% if (side.name.includes('Elotes')) { %>🌽
+                                <% } else if (side.name.includes('Loco')) { %>🔥
+                                    <% } else if (side.name.includes('Cheesy')) { %>🧀
+                                        <% } else if (side.name.includes('Dressed')) { %>🥑
+                                            <% } %>
+                        </span>
+                        <div class="flex-1">
+                            <p class="text-step3-border font-bold text-lg">
+                                <%= side.name %>
+                                    <% if (side.dietary && side.dietary.gluten_free) { %>
+                                        <img src="/images/GF.ico" class="inline-block h-5 w-5 ml-1" alt="Gluten Free">
+                                        <% } %>
+                            </p>
+                            <% if (side.description) { %>
+                                <p class="text-gray-700 text-sm">
+                                    <%= side.description %>
+                                </p>
+                                <% } %>
+                                    <div class="flex items-center gap-2 mt-1">
+                                        <% if (side.allergens && side.allergens.length> 0) { %>
+                                            <span
+                                                class="text-[10px] bg-step3-background text-step3-border border border-step3-border px-1.5 py-0.5 rounded-full">
+                                                (<%= side.allergens.join(', ') %>)
+                                    </span>
+                                <% } %>
+                                <span class="text-step3-border font-bold text-sm ml-auto">€<%= side.price %></span>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <!-- Divider (horizontal on mobile) -->
+        <div class="lg:hidden my-8 flex items-center">
+            <div class="flex-1 border-t-2 border-step3-border border-dotted"></div>
+            <span class="px-4 text-step3-border font-bold text-xl">✦</span>
+            <div class="flex-1 border-t-2 border-step3-border border-dotted"></div>
+        </div>
+
+        <!-- Divider (vertical on large screens) -->
+        <div class="hidden lg:flex lg:flex-col lg:items-center lg:justify-center lg:mx-4">
+            <div class="flex-1 border-l-2 border-step3-border border-dotted"></div>
+            <span class="py-4 text-step3-border font-bold text-2xl">✦</span>
+            <div class="flex-1 border-l-2 border-step3-border border-dotted"></div>
+        </div>
+
+        <!-- Other Sides & Add-Ons Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step3-border mb-6">Other Sides & Add-Ons</h3>
+            
+            <ul class="space-y-3">
+                <% menu.sides.slice(4).forEach(function(side) { %>
+                    <li class="flex items-center gap-2">
+                        <span class="text-step3-border text-xl">
+                            <% if (side.name === 'Plain Fries') { %>🍟
+                                                    <% } else if (side.name.includes('Chipotle')) { %>🔥
+                                                        <% } else if (side.name.includes('Rice')) { %>🍚
+                                                            <% } else if (side.name.includes('Beans')) { %>🫘
+                                                                <% } else if (side.name.includes('Meat')) { %>🥩
+                                                                    <% } else if (side.name.includes('Consommé')) { %>🍲
+                                                                        <% } else if (side.name.includes('Cheese')) { %>
+                                                                            🧀
+                                                                            <% } else if (side.name.includes('Salad')) {
+                                                                                %>🥗
+                                                                                <% } else if
+                                                                                    (side.name.includes('Guacamole')) {
+                                                                                    %>🥑
+                                                                                    <% } else if
+                                                                                        (side.name.includes('Pico')) {
+                                                                                        %>🍅
+                                                                                        <% } else if
+                                                                                            (side.name.includes('Strawberry'))
+                                                                                            { %>🍓
+                                                                                            <% } else if
+                                                                                                (side.name.includes('Pineapple'))
+                                                                                                { %>🍍
+                                                                                                <% } else if
+                                                                                                    (side.name.includes('Roja'))
+                                                                                                    { %>🍅
+                                                                                                    <% } else if
+                                                                                                        (side.name.includes('Verde'))
+                                                                                                        { %>💚
+                                                                                                        <% } %>
+                                            </span>
+                                            <span class="text-gray-700 text-sm font-medium">
+                                                <%= side.name %>
+                                                    <% if (side.allergens && side.allergens.length> 0) { %>
+                                                        <span class="text-xs text-step3-border">(<%=
+                                                                side.allergens.join(', ') %>)</span>
+                            <% } %>
+                            <% if (side.dietary && side.dietary.spicy) { %>
+                                <span class="text-xs">🌶️</span>
+                            <% } %>
+                        </span>
+                        <span class="text-step3-border font-bold ml-auto">€<%= side.price %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        
+    </div>
+    
+</section>

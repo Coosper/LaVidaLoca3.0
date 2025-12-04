@@ -1,0 +1,54 @@
+<!-- Allergen Information Section -->
+<section class="bg-black text-white py-10 border-t-4 border-custom-red">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h2
+                class="text-5xl font-family-custom text-custom-yellow uppercase tracking-widest flex items-center justify-center gap-3">
+                <span class="text-6xl">⚠️</span> Allergens
+            </h2>
+        </div>
+
+        <!-- Main Allergens -->
+        <div class="mb-8">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-base">
+                <% Object.entries(menu.allergen_information.main_allergens).forEach(([num, allergen])=> { %>
+                    <div class="group hover:scale-110 transition-transform">
+                        <span class="font-bold text-custom-yellow text-lg">
+                            <%= num %>.
+                        </span>
+                        <span class="text-gray-200 uppercase tracking-wide group-hover:text-white transition">
+                            <%= allergen %>
+                        </span>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-custom-red to-transparent mb-8"></div>
+
+        <!-- Gluten Subcategories -->
+        <div>
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
+                <% Object.entries(menu.allergen_information.gluten_subcategories).forEach(([letter, subcategory])=> { %>
+                    <div class="group hover:scale-110 transition-transform">
+                        <span class="font-bold text-custom-yellow">
+                            <%= letter %>.
+                        </span>
+                        <span class="text-gray-300 uppercase tracking-wide group-hover:text-white transition">
+                            <%= subcategory %>
+                        </span>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+
+        <!-- Footer Notice -->
+        <div class="mt-8 text-center">
+            <p class="text-gray-500 text-sm italic">
+                Please inform our staff of any allergies or dietary requirements before ordering
+            </p>
+        </div>
+    </div>
+</section>

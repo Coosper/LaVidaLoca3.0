@@ -1,0 +1,119 @@
+<section id="drinks"
+    class="relative bg-step1-background border-dotted border-step1-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-step1-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        🍹 Drinks & Desserts
+    </div>
+
+    <div class="mt-10 flex flex-col lg:flex-row gap-8">
+
+        <!-- Mexican Drinks & Desserts Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step1-border mb-6">Mexican Drinks & Desserts</h3>
+
+            <ul class="space-y-5">
+                <% menu.drinks.mexican_drinks.forEach(function(drink) { %>
+                    <li class="flex items-start gap-3">
+                        <!-- Image -->
+                        <% if (drink.image) { %>
+                            <img src="<%= drink.image %>" alt="<%= drink.name %>"
+                                class="w-16 h-16 rounded-lg object-cover flex-shrink-0">
+                            <% } else { %>
+                                <span class="text-step1-border text-2xl flex-shrink-0">
+                                    <% if (drink.name.includes('Horchata')) { %>🥛
+                                        <% } else if (drink.name.includes('Jarritos')) { %>🍋
+                                            <% } %>
+                                </span>
+                                <% } %>
+
+                                    <div class="flex-1">
+                                        <p class="text-step1-border font-bold text-lg">
+                                            <%= drink.name %>
+                                        </p>
+                                        <p class="text-gray-700 text-sm">
+                                            <%= drink.description %>
+                                        </p>
+                                        <div class="flex items-center gap-2 mt-1">
+                                            <% if (drink.allergens && drink.allergens.length> 0) { %>
+                                                <span
+                                                    class="text-[10px] bg-step1-background text-step1-border border border-step1-border px-1.5 py-0.5 rounded-full">
+                                                    (<%= drink.allergens.join(', ') %>)
+                                    </span>
+                                <% } %>
+                                <span class="text-step1-border font-bold text-sm ml-auto">€<%= drink.price %></span>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+
+                <!-- Desserts -->
+                <% menu.desserts.forEach(function(dessert) { %>
+                    <li class="flex items-start gap-3">
+                        <!-- Image -->
+                        <% if (dessert.image) { %>
+                            <img src="<%= dessert.image %>" alt="<%= dessert.name %>" class="w-16 h-16 rounded-lg object-cover flex-shrink-0">
+                        <% } else { %>
+                            <span class="text-step1-border text-2xl flex-shrink-0">🍰</span>
+                        <% } %>
+                        
+                        <div class="flex-1">
+                            <p class="text-step1-border font-bold text-lg">
+                                <%= dessert.name %>
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <%= dessert.description %>
+                            </p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <% if (dessert.allergens && dessert.allergens.length > 0) { %>
+                                    <span class="text-[10px] bg-step1-background text-step1-border border border-step1-border px-1.5 py-0.5 rounded-full">
+                                        (<%= dessert.allergens.join(' , ') %>)
+                                    </span>
+                                <% } %>
+                                <span class="text-step1-border font-bold text-sm ml-auto">€<%= dessert.price %></span>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <!-- Divider (horizontal on mobile) -->
+        <div class="lg:hidden my-8 flex items-center">
+            <div class="flex-1 border-t-2 border-step1-border border-dotted"></div>
+            <span class="px-4 text-step1-border font-bold text-xl">✦</span>
+            <div class="flex-1 border-t-2 border-step1-border border-dotted"></div>
+        </div>
+
+        <!-- Divider (vertical on large screens) -->
+        <div class="hidden lg:flex lg:flex-col lg:items-center lg:justify-center lg:mx-4">
+            <div class="flex-1 border-l-2 border-step1-border border-dotted"></div>
+            <span class="py-4 text-step1-border font-bold text-2xl">✦</span>
+            <div class="flex-1 border-l-2 border-step1-border border-dotted"></div>
+        </div>
+
+        <!-- Other Drinks Section -->
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold text-step1-border mb-6">Other Drinks</h3>
+            
+            <ul class="space-y-3">
+                <% menu.drinks.other_drinks.forEach(function(drink) { %>
+                    <li class="flex items-center gap-3">
+                        <!-- Image -->
+                        <% if (drink.image) { %>
+                            <img src="<%= drink.image %>" alt="<%= drink.name %>" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
+                        <% } else { %>
+                            <span class="text-step1-border text-xl flex-shrink-0">🥤</span>
+                        <% } %>
+                        
+                        <span class="text-gray-700 text-sm font-medium flex-1">
+                            <%= drink.name %>
+                        </span>
+                        <span class="text-step1-border font-bold">€<%= drink.price %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        
+    </div>
+    
+</section>

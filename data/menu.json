@@ -483,6 +483,7 @@
                 "name": "Horchata",
                 "description": "Traditional Mexican rice milk beverage with cinnamon and vanilla. Lightly sweetened milkshake-style drink.",
                 "price": "5.00",
+                "image": "/images/horchata.png",
                 "allergens": [
                     7
                 ]
@@ -492,6 +493,7 @@
                 "name": "Jarritos",
                 "description": "Naturally flavored Mexican lemonades.",
                 "price": "4.20",
+                "image": "/images/jarritos.png",
                 "allergens": []
             }
         ],
@@ -499,22 +501,26 @@
             {
                 "id": 1,
                 "name": "Regular Coke",
-                "price": "3.50"
+                "price": "3.50",
+                "image": "/images/coke.png"
             },
             {
                 "id": 2,
                 "name": "Coke Zero",
-                "price": "3.00"
+                "price": "3.00",
+                "image": "/images/coke-zero.png"
             },
             {
                 "id": 3,
                 "name": "Monster Mango",
-                "price": "4.00"
+                "price": "4.00",
+                "image": "/images/monster.png"
             },
             {
                 "id": 4,
                 "name": "Water",
-                "price": "3.00"
+                "price": "3.00",
+                "image": "/images/water.png"
             }
         ]
     },
@@ -524,6 +530,7 @@
             "name": "Tres Leches",
             "description": "Authentic Mexican dessert.",
             "price": "4.50",
+            "image": "/images/cake.png",
             "allergens": [
                 "1A",
                 3,

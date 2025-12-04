@@ -1,0 +1,42 @@
+<section id="other"
+    class="relative bg-other-background border-dotted border-other-border border-4 shadow-xl rounded-lg p-6 mt-16 mb-8 mx-4 md:mx-8 lg:mx-16 font-family-brandon">
+    <div
+        class="absolute -top-10 left-1/2 -translate-x-1/2 bg-other-border text-menu-background font-family-custom px-4 py-2 uppercase shadow-xl w-[350px] md:w-[450px] flex items-center justify-center text-3xl md:text-4xl rotate-[358deg]">
+        🍽️ Other Dishes
+    </div>
+
+    <div class="mt-10">
+        <ul class="space-y-5">
+            <% menu.other_dishes.forEach(function(dish) { %>
+                <li class="flex items-start">
+                    <span class="text-other-border mr-2 text-2xl">
+                        <% if (dish.name.includes('Torta')) { %>🥖
+                            <% } else if (dish.name.includes('Caesar')) { %>🥗
+                                <% } else if (dish.name.includes('Tapas')) { %>🎉
+                                    <% } else { %>🍽️<% } %>
+                    </span>
+                    <div class="flex justify-between w-full">
+                        <div class="flex-1">
+                            <p class="text-other-border font-bold text-lg">
+                                <%= dish.name %>
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <%= dish.description %>
+                            </p>
+                            <div class="flex gap-2 mt-1 flex-wrap">
+                                <% if (dish.allergens && dish.allergens.length> 0) { %>
+                                    <span
+                                        class="text-[10px] bg-other-background text-other-border border border-other-border px-1.5 py-0.5 rounded-full">
+                                        (<%= dish.allergens.join(', ') %>)
+                                    </span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <p class="text-other-border font-bold text-xl ml-4">€<%= dish.price %></p>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+</section>

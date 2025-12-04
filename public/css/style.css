@@ -41,6 +41,10 @@
   --color-addon-background: #f6e0c8;
 }
 
+body {
+  background-color: var(--color-menu-background);
+}
+
 /* Mobile menu animations */
 /* Mobile menu initial state: hidden and collapsed */
 #mobile-menu {
